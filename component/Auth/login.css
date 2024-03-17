@@ -1,0 +1,237 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 475px;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cancleForm {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    background-color: var(--primary-lite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancleForm:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.form_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #202124;
+    margin-bottom: 32px
+}
+
+::placeholder {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form button {
+    align-self: flex-end;
+}
+
+.flex-column>label {
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+}
+
+.inputForm {
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+    background-color: var(--primary-lite);
+}
+
+.input {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 85%;
+    height: 100%;
+    background-color: var(--primary-lite);
+}
+
+.input:focus {
+    outline: none;
+    background-color: white;
+}
+
+.inputForm:focus-within {
+    border: 1.5px solid #2d79f3;
+    background-color: white;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.flex-row>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row>div>label {
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    margin-left: 10px;
+    color: grey;
+}
+
+.span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: grey;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-submit {
+    margin: 20px 0 10px 0;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-submit:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.p {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    /* border: 1px solid #ededef; */
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.facebook {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: all 0.2 ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.facebook:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.gmail {
+    color: #dc4d28;
+    border: 1px solid #dc4d28;
+    transition: all 0.2 ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.gmail:hover {
+    background-color: #dc4d28;
+    color: white;
+}
+
+/* signup css */
+
+.signup_type{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.signup_type>div{
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--primary-color);
+    background-color: #e2eaf8;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 8px;
+    font-weight: 400;
+    padding: 15px 50px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.signup_type>div:first-child{
+    color: white;
+    background-color: #34a853;
+    
+}
+.signup_type>div:last-child{
+    color: var(--primary-color);
+background-color: aliceblue;
+}
+
+#signupForm{
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .main-container{
+        padding: 0 0;
+    }
+  }
+
+  
+@media only screen and (max-width: 800px) {
+    .main-container{
+        flex-direction: column;
+    }
+  }
+

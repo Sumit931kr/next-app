@@ -1,0 +1,163 @@
+
+.jobs_first_section{
+    display: flex;
+    justify-content: space-between;
+}
+
+#sortbytime{
+    position: relative;
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: dimgray;
+  line-height: 25px;
+  background-color: #f0f5f7;
+  min-width: 146px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+#sortbytime>option{
+    font-size: 13px;
+}
+
+
+/* job Css */
+
+.job_container{
+  position: relative;
+  padding: 32px 20px 22px 30px;
+  background: #fff;
+  border: 1px solid #ecedf2;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all .3s ease;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.saved_icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saved_icon:hover{
+    background-color: #ecedf2;
+}
+
+.job_img_container{
+    width: 60px;
+    padding: 0px 20px 0px 0px;
+}
+
+.job_image_container>img{
+    width: 100%;
+}
+.job_details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job_title{
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.job_title:hover{
+    color: var(--primary-color);
+
+}
+
+.companyinfo{
+    display: flex;
+    gap: 15px;
+    color: grey;
+    font-size: 14px;
+}
+.companyinfo >div{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.job_info{
+    display: flex;
+    gap:15px;
+}
+
+.job_info >div{
+    display: flex;
+    padding: 3px 7px;
+    position: relative;
+    font-size: 13px;
+    line-height: 15px;
+    margin-right: 15px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    margin-bottom: 10px 
+}
+
+.job_type{
+    background-color: var(--primary-lite);
+    color: var(--primary-color);
+}
+
+.jprivate{
+    background: rgba(52, 168, 83, .15);
+    color: #34a853;
+}
+
+.jurgent {
+    background: rgba(249, 171, 0, .15);
+    color: #f9ab00;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    float: right;
+    gap: 10px;
+  }
+  
+  .pagination div {
+    color: black;
+    float: left;
+    width: 40px;
+    /* padding: 15px; */
+    aspect-ratio: 3/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #b0b0b1;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  .pagination > div:hover{
+background-color: rgba(209, 206, 206, 0.667);
+  }
+
+  .selected_page{
+    color: white !important;
+    background-color: var(--primary-color);
+  }
+  .selected_page:hover{
+    background-color: var(--primary-color-hover) !important;
+  }

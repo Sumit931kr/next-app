@@ -1,0 +1,22 @@
+.auth_container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 0.4; */
+    z-index: 12345;
+    /* pointer-events: none; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth_child{
+    /* font-size: 80px; */
+    /* position: absolute; */
+    z-index: 23456;
+
+    /* color: red; */
+}
+
+
