@@ -53,11 +53,11 @@ const Signup = () => {
 
     return (
         <div className="form" id="signupForm">
-            <div className='cancleForm' onClick={cancleForm}><i class="fa-solid fa-xmark"></i></div>
+            <div className='cancleForm' onClick={cancleForm}><i className="fa-solid fa-xmark"></i></div>
             <div className='form_title'>Create a Free Superio Account </div>
             <div className='signup_type'>
-                <div><i class="fa-regular fa-user"></i>Candidate</div>
-                <div><i class="fa-solid fa-briefcase"></i>Employer</div>
+                <div><i className="fa-regular fa-user"></i>Candidate</div>
+                <div><i className="fa-solid fa-briefcase"></i>Employer</div>
             </div>
             <div className="flex-column">
                 <label>Username </label></div>
@@ -85,10 +85,10 @@ const Signup = () => {
 
             <div className="flex-row">
                 <div className="btn facebook">
-                    <i class="fa-brands fa-facebook-f"></i> Log In via Facebook
+                    <i className="fa-brands fa-facebook-f"></i> Log In via Facebook
                 </div>
                 <div className="btn gmail">
-                    <i class="fa-solid fa-g"></i>  Log In via Gmail
+                    <i className="fa-solid fa-g"></i>  Log In via Gmail
                 </div></div>
         </div>
     )

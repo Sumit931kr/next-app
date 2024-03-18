@@ -53,7 +53,7 @@ const Login = () => {
 
     return (
         <div className="form" id="loginForm">
-            <div className='cancleForm' onClick={cancleForm}><i class="fa-solid fa-xmark"></i></div>
+            <div className='cancleForm' onClick={cancleForm}><i className="fa-solid fa-xmark"></i></div>
             <div className='form_title'>Login to Superio</div>
             <div className="flex-column">
                 <label>Username </label></div>
@@ -81,10 +81,10 @@ const Login = () => {
 
             <div className="flex-row">
                 <div className="btn facebook">
-                    <i class="fa-brands fa-facebook-f"></i> Log In via Facebook
+                    <i className="fa-brands fa-facebook-f"></i> Log In via Facebook
                 </div>
                 <div className="btn gmail">
-                    <i class="fa-solid fa-g"></i>  Log In via Gmail
+                    <i className="fa-solid fa-g"></i>  Log In via Gmail
                 </div></div>
         </div>
     )

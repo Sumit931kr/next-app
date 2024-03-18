@@ -4,13 +4,14 @@ import './header.css'
 
 const Header = () => {
 
-    const openLoginSignup = () =>{
+    const openLoginSignup = () => {
         let ac = document.querySelector('.auth_container');
         ac.style.display = 'flex'
     }
 
     return (
-        <div className='header-container'>
+        <>
+       <div className='header-container'>
             <div className="header-left-section">
                 <div>Learnkoods</div>
                 <div>Home</div>
@@ -26,6 +27,20 @@ const Header = () => {
                 <div className='job_post_btn'>job Post</div>
             </div>
         </div>
+            <div className='header-container-mob'>
+                <div className='header-left-section'>
+                    <div>Learnkoods</div>
+                </div>
+                <div className="header-right-section">
+                    <div onClick={openLoginSignup}><i className="fa-regular fa-user"></i></div>
+                    <div><i class="fa-solid fa-bars"></i></div>
+                </div>
+                <div className='sidebar_nav'>
+
+                </div>
+            </div>
+        </>
+
     )
 }
 

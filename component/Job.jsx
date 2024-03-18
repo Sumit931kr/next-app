@@ -22,18 +22,18 @@ const Job = ({ jobsData, loading, setloading }) => {
                                 <div className="job_title">{el.job_title}</div>
                                 <div className='companyinfo'>
                                     <div className='company_name'>
-                                        <i class="fa-solid fa-briefcase"></i>{el.company}
+                                        <i className="fa-solid fa-briefcase"></i>{el.company}
                                     </div>
                                     <div className='company_location'>
-                                        <i class="fa-solid fa-location-dot"></i> {el.location}
+                                        <i className="fa-solid fa-location-dot"></i> {el.location}
                                     </div>
                                     <div className='job_posting'>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         {/* {jobPosting} */}
                                         {moment(+new Date(el.created_at)).format("Do MMM")}
                                     </div>
                                     <div className='salary_container'>
-                                        <i class="fa-solid fa-money-bills"></i>
+                                        <i className="fa-solid fa-money-bills"></i>
                                         {el.min_salary ? el.min_salary : "$35k "} - {el.max_salary ? el.max_salary : " $45k"}
                                     </div> 
                                 </div>
@@ -50,7 +50,7 @@ const Job = ({ jobsData, loading, setloading }) => {
                                 </div>
                             </div>
                             <div className='saved_icon'>
-                                <i class="fa-regular fa-bookmark"></i>
+                                <i className="fa-regular fa-bookmark"></i>
                             </div>
                         </div>
                     ))
@@ -70,7 +70,7 @@ const Job = ({ jobsData, loading, setloading }) => {
                             </div>
                         </div>
                         <div className='saved_icon'>
-                            <i class="fa-regular fa-bookmark"></i>
+                            <i className="fa-regular fa-bookmark"></i>
                         </div> */}
                         Loading...
                     </div>

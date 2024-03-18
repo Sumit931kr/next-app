@@ -31,7 +31,7 @@ const Filter = ({ jobsData, setJobsData, setloading }) => {
                 </h4>
                 <div style={{ position: 'relative' }}>
                     <input type="text" className='filter_search' onChange={handleChange} placeholder='Job title' />
-                    <div className='search_icon'><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div className='search_icon'><i className="fa-solid fa-magnifying-glass"></i></div>
                 </div>
             </div>
         </div>
