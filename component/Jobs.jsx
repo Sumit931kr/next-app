@@ -13,7 +13,8 @@ const Jobs = ({ jobsData, setJobsData, loading, setloading }) => {
     const getJobsData = async (url) => {
         setloading(false);
         // let val = 
-        const response = await axios.get(`${url? url : 'https://learnkoodsapi.onrender.com/jobs_api/'}`)
+        // const response = await axios.get(`${url? url : 'https://learnkoodsapi.onrender.com/jobs_api/'}`)
+        const response = await axios.get(`${url? url : 'https://learnkoods-task.onrender.com/job_api/'}`)
         // console.log(response)
         setUrls({"next":response.data.next,"previous":response.data.previous})
 

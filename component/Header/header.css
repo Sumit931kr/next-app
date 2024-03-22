@@ -6,7 +6,7 @@
     justify-content: space-between;
     padding: 16px 0;
     align-items: center;
-    box-shadow: 1px 1px 10px 2px rgba(224, 219, 219, 0.868);
+    box-shadow: 1px 1px 1px 0.5px rgba(224, 219, 219, 0.868);
     position: fixed;
     background-color: white;
     z-index: 4512;

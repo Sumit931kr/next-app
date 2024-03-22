@@ -24,7 +24,8 @@ const Login = () => {
             formData.append('password', password.value);
 
             // Make POST request with FormData
-            const response = await axios.post('https://learnkoodsapi.onrender.com/login_api/', formData);
+            // const response = await axios.post('https://learnkoodsapi.onrender.com/login_api/', formData);
+            const response = await axios.post('https://learnkoods-task.onrender.com/login_api/', formData);
 
             // Handle response
             console.log('Response:', response.data);
