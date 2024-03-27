@@ -185,14 +185,15 @@
 
 /* signup css */
 
-.signup_type{
+.signup_type {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-.signup_type>div{
+
+.signup_type>div {
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -209,32 +210,33 @@
     cursor: pointer;
 }
 
-.signup_type>div:first-child{
+.signup_type>div:first-child {
     color: white;
     background-color: #34a853;
-    
-}
-.signup_type>div:last-child{
-    color: var(--primary-color);
-background-color: aliceblue;
+
 }
 
-#signupForm{
+.signup_type>div:last-child {
+    color: var(--primary-color);
+    background-color: aliceblue;
+}
+
+#signupForm {
     display: none;
 }
 
-.fname_lname{
+.fname_lname {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.fname_lname>div{
+.fname_lname>div {
     /* display: flex; */
     /* flex-direction: c; */
 }
 
-.fname_lname>div>label{
+.fname_lname>div>label {
     color: rgb(67, 67, 67);
     font-weight: 600;
 }
@@ -242,27 +244,52 @@ background-color: aliceblue;
 
 
 
-@media only screen and (max-width: 1100px) {
-    .main-container{
+@media only screen and (max-width: 1300px) {
+    .main-container {
         padding: 0 0;
     }
-  }
+}
 
-  
-@media only screen and (max-width: 800px) {
-    .main-container{
+
+@media only screen and (max-width: 900px) {
+    .main-container {
         flex-direction: column;
     }
-  }
+}
 
-  @media only screen and (max-width: 480px) {
-    .form{
-       width: 100%;
-       /* padding: 0; */
+@media only screen and (max-width: 480px) {
+    .job_container {
+        padding: 16px 7px 5px 6px !important;
     }
-    .auth_child{
+
+    .saved_icon {
+        top: 0px !important;
+        right: 0px !important;
+    }
+
+    .job_img_container {
+        padding: 0px !important;
+        display: none !important;
+    }
+
+    .job_posting {
+        display: none !important;
+
+    }
+
+    .salary_container {
+        display: none !important;
+    }
+
+    .job_info{
+        gap: 2px !important;
+    }
+    .form {
+        width: 100%;
+        /* padding: 0; */
+    }
+
+    .auth_child {
         width: 100%;
     }
-  }
-
-
+}

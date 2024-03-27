@@ -13,7 +13,7 @@ const Header = () => {
         <>
             <div className='header-container'>
                 <div className="header-left-section">
-                    <div>Learnkoods</div>
+                    <div className='company_name_logo'>Learnkoods</div>
                     <div>Home</div>
                     <div>Find jobs</div>
                     <div>Employers</div>
@@ -33,11 +33,11 @@ const Header = () => {
                 </div>
                 <div className='header-container-mob'>
                     <div className='header-left-section'>
-                        <div>Learnkoods</div>
+                        <div className='company_name_logo'>Learnkoods</div>
                     </div>
                     <div className="header-right-section">
                         <div onClick={openLoginSignup}><i className="fa-regular fa-user"></i></div>
-                        <div><i class="fa-solid fa-bars"></i></div>
+                        <div><i className="fa-solid fa-bars"></i></div>
                     </div>
                 </div>
             </div>

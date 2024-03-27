@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
 import './jobs.css'
 import moment from 'moment'
+import Link from 'next/link'
 
 const Job = ({ jobsData, loading, setloading }) => {
-
-    useEffect(() => {
-
-    })
+console.log(jobsData)
 
     return (
         <>
@@ -19,7 +17,7 @@ const Job = ({ jobsData, loading, setloading }) => {
                                 <img src="/vercel.svg" alt="" />
                             </div>
                             <div className='job_details'>
-                                <div className="job_title">{el.job_title}</div>
+                               <Link href={el.url} style={{textDecoration:'none', color:'black'}}> <div className="job_title">{el.title}</div> </Link>
                                 <div className='companyinfo'>
                                     <div className='company_name'>
                                         <i className="fa-solid fa-briefcase"></i>{el.company}
@@ -30,16 +28,18 @@ const Job = ({ jobsData, loading, setloading }) => {
                                     <div className='job_posting'>
                                         <i className="fa-regular fa-clock"></i>
                                         {/* {jobPosting} */}
-                                        {moment(+new Date(el.created_at)).format("Do MMM")}
+                                        {moment(+new Date(el.created)).format("Do MMM")}
                                     </div>
                                     <div className='salary_container'>
                                         <i className="fa-solid fa-money-bills"></i>
-                                        {el.min_salary ? el.min_salary : "$35k "} - {el.max_salary ? el.max_salary : " $45k"}
+                                        ${el['min salary'] ? (el['min salary']/1000).toFixed(2)+'k' : "$35k "} 
+                                        -
+                                         ${el['max salary'] ? (el['max salary']/1000).toFixed(2)+'k'  : " $45k"}
                                     </div> 
                                 </div>
                                 <div className='job_info'>
                                     <div className='job_type'>
-                                        {el.job_type ? el.job_type : "Full Time"}
+                                        {el.type ? el.type : "Full Time"}
                                     </div>
                                     <div className='jprivate'>
                                         Private

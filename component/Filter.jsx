@@ -14,7 +14,7 @@ const Filter = ({ jobsData, setJobsData, setloading }) => {
         }
         else {
             if (jobsData.length > 0) {
-                const filteredData = data.filter(item => item.job_title.toLowerCase().includes(value.toLowerCase()));
+                const filteredData = data.filter(item => item.title.toLowerCase().includes(value.toLowerCase()));
                 setJobsData(filteredData);
             }
         }

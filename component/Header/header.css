@@ -27,10 +27,10 @@
     cursor: pointer;
 }
 
-.header-left-section>div:first-child {
+.company_name_logo {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2rem !important;
     margin-right: 45px;
     /* margin-right: 30px; */
 }

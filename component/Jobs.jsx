@@ -33,17 +33,25 @@ const Jobs = ({ jobsData, setJobsData, loading, setloading }) => {
         setloading(false)
         let value = jobSortRef.current.value;
         // console.log(value)
-        if (value == "1" || value == "0") {
+
+
+        if (value == "1") {
             let sortedData = jobsData.sort((a, b) => {
-                return new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime()
+                return new Date(a.created).getTime() - new Date(b.created).getTime()
             })
             setJobsData(sortedData);
         }
         else if (value == "2") {
             let sortedData = jobsData.sort((a, b) => {
-                return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+                return new Date(b.created).getTime() - new Date(a.created).getTime()
             })
             setJobsData(sortedData);
+        }
+        else{
+            let data = localStorage.getItem('localJobsData')
+            if(data){
+                setJobsData(JSON.parse(data));
+            }
         }
         setTimeout(() => {
             setloading(true);
