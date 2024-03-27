@@ -5,34 +5,64 @@ import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Jobs from "@/component/Jobs";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
 
   const [jobsData, setJobsData] = useState([]);
   const [loading, setloading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  window.onscroll = function() {scrollFunction()};
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-  function scrollFunction() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      scrollToTopBtn.style.display = "block";
-    } else {
-      scrollToTopBtn.style.display = "none";
-    }
-  }
+    // Attach scroll event listener when component mounts
+    window.addEventListener('scroll', handleScroll);
 
-  function scrollToTop() {
+    // Cleanup: remove scroll event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once
+
+  const scrollToTop = () => {
     // Smooth scroll to the top
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
-  }
+  };
+
+  // window.onscroll = function() {scrollFunction()};
+
+  // function scrollFunction() {
+  //   var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  //     scrollToTopBtn.style.display = "block";
+  //   } else {
+  //     scrollToTopBtn.style.display = "none";
+  //   }
+  // }
+
+  // function scrollToTop() {
+  //   // Smooth scroll to the top
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  // }
 
   return (
     <>
-    <button onClick={scrollToTop} id="scrollToTopBtn" title="Go to top"><i className="fa-solid fa-angle-up"></i></button>
+    <button id="scrollToTopBtn" style={{display : isVisible ? 'flex' : 'none'}}
+      onClick={scrollToTop} title="Go to top"><i className="fa-solid fa-angle-up" ></i></button>
     <Auth/>
       <Header />
       <br/><br/><br/>

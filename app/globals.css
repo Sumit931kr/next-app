@@ -69,6 +69,8 @@
     width: 40px;
     aspect-ratio: 1/1;
     transition: all 0.2s ease;
+    justify-content: center;
+    align-items: center;
   }
 
   #scrollToTopBtn:hover {
